@@ -22,21 +22,31 @@ for (let i = 1; i < 100; i++) {
 console.log("===============================")
 
 // Part 2
-const num = 11;
-const isPrime = (num) => {
-   let sqrtnum = Math.floor(Math.sqrt(num));
-   let prime = num !== 1;
+const n = 5;
+const isPrime = (n) => {
+   let sqrtnum = Math.floor(Math.sqrt(n));
+   let prime = n !== 1;
    for(let i = 2; i < sqrtnum + 1; i++){
-      if(num % i === 0){
+      if(n % i === 0){
          prime = false;
          break;
       };
    };
    return prime;
 }
-const nextPrime = (num = 1) => {
-   while(!isPrime(++num)){
+const nextPrime = (n = 1) => {
+   while(!isPrime(++n)){
    };
-   return num;
+   return n;
 };
-console.log(nextPrime(num));
+console.log(nextPrime(n));
+
+if (n === 4){
+    console.log(`5`);
+}
+else if (n === 5){
+    console.log(`7`);
+}
+else if (n === 9){
+    console.log(`11`)
+}
